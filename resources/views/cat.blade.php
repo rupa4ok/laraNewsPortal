@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
-                    123
+                    Каталог
                 </div>
             </div>
         </div>
