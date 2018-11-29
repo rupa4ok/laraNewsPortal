@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
-                    {{$name}}
+                    Каталог
                 </div>
             </div>
         </div>
