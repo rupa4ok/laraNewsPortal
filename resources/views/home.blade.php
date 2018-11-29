@@ -15,7 +15,7 @@
                     @endif
 
                     You are logged in!
-                    123
+                    {{$name}}
                 </div>
             </div>
         </div>

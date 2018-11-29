@@ -84,15 +84,15 @@ class CategoryController extends Controller
         $category->update($request->all());
         return redirect()->route('admin.category.index');
     }
-
+    
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
+     * @param Category $category
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return redirect()->route('admin.category.index');
     }
 }
