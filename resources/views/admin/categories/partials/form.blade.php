@@ -13,7 +13,7 @@
 <input type="text" class="form-control" name="title" placeholder="Заголовок категории" value="{{$category->title or ""}}" required>
 
 <label for="">Slug</label>
-<input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$category->slug or ""}}" readonly="">
+<input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$category->slug or ""}}" >
 
 <label for="">Родительская категория</label>
 <select class="form-control" name="parent_id">
