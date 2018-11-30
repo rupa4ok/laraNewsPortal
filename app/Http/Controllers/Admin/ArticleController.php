@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Article;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -27,7 +28,11 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.articles.create', [
+            'article' => [],
+            'categories' => Category::with('children')->where('parent_id', 0)->get(),
+            'delimiter' => ''
+        ]);
     }
 
     /**
@@ -38,7 +43,12 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $article = Article::create($request->all());
+        
+        //Проверка наличия категории у новости
+        if ($request->input('categories')) :
+        
+        endif;
     }
 
     /**
