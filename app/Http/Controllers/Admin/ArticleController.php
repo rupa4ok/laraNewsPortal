@@ -47,8 +47,10 @@ class ArticleController extends Controller
         
         //Проверка наличия категории у новости
         if ($request->input('categories')) :
-        
+            $article->categories()->attach($request->input('categories'));
         endif;
+        
+        return redirect()->route('admin.article.index');
     }
 
     /**

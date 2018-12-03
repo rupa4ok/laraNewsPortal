@@ -16,16 +16,16 @@ use Carbon\Carbon;
  */
 class Category extends Model
 {
-// Mass assigned
+    // Mass assigned
     protected $fillable = ['title', 'slug', 'parent_id', 'published', 'created_by', 'modified_by'];
-
-//Mutators
+    
+    //Mutators
     public function setSlugAttribute($value)
     {
         $this->attributes['slug'] = Str::slug(mb_substr($this->title, 0, 40));
     }
-
-//Get children category
+    
+    //Get children category
     public function children()
     {
         return $this->hasMany(self::class, 'parent_id');
